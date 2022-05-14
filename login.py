@@ -21,9 +21,10 @@ def login():
         print(dict1)
         result=dbstore.Stdent_data(Name,Address,Mobile_Number,E_mail)
         if result=="Details Enter Successfully":
-            return render_template('index1.html',Prediction2=result)
+            return render_template('index1.html',Prediction1=result)
         else:
             return render_template('index1.html',Prediction2=result)
+            
     except:
         result="Please Enter valid Result"
         return render_template('index1.html',Prediction2=result)
